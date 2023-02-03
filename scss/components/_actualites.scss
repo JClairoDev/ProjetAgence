@@ -1,0 +1,68 @@
+@use '../utils/variables';
+
+.actu-card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+    transition: transform 0.5s;
+   
+
+    .actu-card-header{
+        transition: transform 0.5s;
+        img {     
+            width: 100%;
+        }
+        &:hover{  
+            transform: scale(1.1);
+        }
+    }
+} 
+
+.grid-actu{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.actu-icons{
+    box-sizing: border-box;
+    display: flex;
+    gap: 3rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    color: variables.$color-secondary;
+
+    span {
+        color: grey;
+    }
+
+   
+
+}
+
+.actu-main{
+    h3 {
+        padding-left: 1rem;
+        color: variables.$color-primary;
+    }
+}
+
+.actu-date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.5rem;
+    padding: 1rem;
+
+    i {
+        color: variables.$color-secondary;
+    }
+
+    span {
+        color: grey;
+    }
+
+    a {
+        color: variables.$color-secondary;
+    }
+}

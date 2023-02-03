@@ -1,0 +1,71 @@
+@use '../utils/variables';
+
+
+.card{
+    position: relative;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+
+    &:hover{
+        background-color: variables.$color-primary;
+        border-radius: 25%;
+    }
+
+    .inner-card{
+        position: absolute;
+        background-color: #ffded8;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+
+    }
+
+    .logo-card{
+        display: block;
+        position: absolute;
+        font-size: 45px;
+        color: variables.$color-secondary;
+    }
+
+    > h4 {
+        position: absolute;
+        bottom: 2rem;
+        font-size: smaller;
+        padding: 0;
+        margin: 0;
+    }
+
+
+}
+.card-arrow{
+    margin-bottom: -1.5rem;
+    bottom: 0;
+    position: absolute;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > i {
+        font-size: smaller;
+        
+    }
+
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    row-gap: 2rem;
+}
