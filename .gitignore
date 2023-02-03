@@ -1,0 +1,7 @@
+#DEPENDENCIES
+
+/node_modules
+
+#DIST
+
+/dist 
