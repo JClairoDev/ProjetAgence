@@ -22,8 +22,9 @@ header {
     padding: 2rem 0;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    width: auto;
 
-    > .container {
+    >.container {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -44,7 +45,7 @@ header {
                     }
 
                     &:has(ul) {
-                        > a {
+                        >a {
                             &::after {
                                 display: inline-block;
                                 content: '\f105';

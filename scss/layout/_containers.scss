@@ -5,24 +5,59 @@
     margin: 0 auto;
 }
 
-@media screen and (max-width: variables.$breakpoint-desktop) {
-    .container {
-        width: variables.$breakpoint-tablet;
-    }
-
-
-}
-
-@media screen and (max-width: variables.$breakpoint-tablet) {
-    .container {
-        width: variables.$breakpoint-smartphone;
-    }
-
-}
-
-@media screen and (max-width: variables.$breakpoint-smartphone) {
+@media only screen and (max-width: variables.$breakpoint-desktop) {
     .container {
         width: 100%;
     }
+}
 
+@media only screen and (max-width: variables.$breakpoint-interval-desktop) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: variables.$breakpoint-tablet) {
+    .container {
+        width: variables.$breakpoint-smartphone;
+
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-actu {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .footer {
+            grid-template-columns: repeat(2, minmax(100px, 1fr));
+        }
+    }
+
+    .sticky-bar>.container {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: variables.$breakpoint-smartphone) {
+    .container {
+        width: 100%;
+
+        .grid-container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .grid-actu {
+            grid-template-columns: repeat(1 1fr);
+        }
+
+        .footer {
+            grid-template-columns: repeat(1, minmax(100px, 1fr));
+        }
+    }
+
+    .sticky-bar>.container nav ul {
+        flex-direction: column;
+    }
 }
